@@ -1,0 +1,15 @@
+{
+  "name": "gitlab-webhook-receiver",
+  "version": "1.0.0",
+  "description": "Webhook receiver for git lab that works out of the box",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "author": "wyvernnot",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3",
+    "ws": "^0.8.0"
+  }
+}
