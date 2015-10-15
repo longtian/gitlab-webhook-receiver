@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha",
-    "prepublish": "npm version patch",
     "postversion": "git push origin master && git push --follow-tags"
   },
   "author": "wyvernnot",
