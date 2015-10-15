@@ -1,11 +1,11 @@
 {
   "name": "gitlab-webhook-receiver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webhook receiver for git lab that works out of the box",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha",
-    "prepublish":"npm version patch",
+    "prepublish": "npm version patch",
     "postversion": "git push origin master && git push --follow-tags"
   },
   "author": "wyvernnot",
