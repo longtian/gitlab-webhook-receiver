@@ -45,12 +45,23 @@ function requestHandler(req, res) {
   }
 }
 
+/**
+ * send to all clients
+ *
+ * @param message
+ */
 function broadcastMessage(message) {
   wss.clients.forEach(function (client) {
     client.send(message);
   });
 }
 
+/**
+ * serve notification.js
+ *
+ * @param req
+ * @param res
+ */
 function serveContent(req, res) {
   var scriptContent = require('fs').readFileSync('notification.js').toString('utf-8');
   res.setHeader('Content-Type', 'text/javascript');
