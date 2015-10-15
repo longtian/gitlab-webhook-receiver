@@ -22,6 +22,22 @@ function requestHandler(req, res) {
     req.on('end', function () {
       var message = Buffer.concat(buffer, contentLength).toString();
       broadcastMessage(message);
+      try {
+        var debugObject = {
+          xForwardedFor: req.headers['x-forwarded-for'],
+          remoteAddress: req.socket.address(),
+          url: req.url,
+          method: req.method,
+          headers: req.headers,
+          payload: JSON.parse(message)
+        };
+        console.log(require('util').inspect(debugObject, {
+          colors: true
+        }));
+      } catch (e) {
+        console.error(e);
+      }
+
       res.end();
     });
   } else {
