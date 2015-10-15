@@ -1,6 +1,6 @@
 {
   "name": "gitlab-webhook-receiver",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Webhook receiver for git lab that works out of the box",
   "main": "index.js",
   "scripts": {
